@@ -1,0 +1,400 @@
+
+<!DOCTYPE html>
+<html lang="en" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>java2 - Eiunui的小空间</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="Eiunui,"> 
+    <meta name="description" content="
+— 学无止境 转向Java 拥抱开源 —旅行的意义在于找到自己，而非浏览他人。这短短的一生，我们最终都会失去。你不妨大胆一些，爱一个人，攀一座山，追一个梦。
+
+编码规范类名要求：
+
+类名必须以英文,"> 
+    <meta name="author" content="Eiunui"> 
+    <link rel="alternative" href="atom.xml" title="Eiunui的小空间" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon2.png"> 
+    
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+
+    
+<link rel="stylesheet" href="/css/diaspora.css">
+
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+              google_ad_client: "ca-pub-8691406134231910",
+              enable_page_level_ads: true
+         });
+    </script>
+    <script async custom-element="amp-auto-ads"
+        src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+    </script>
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body class="loading">
+    <span id="config-title" style="display:none">Eiunui的小空间</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="iconfont icon-home image-icon" href="javascript:;" data-url="http://yoursite.com"></a>
+    <div title="播放/暂停" class="iconfont icon-play"></div>
+    <h3 class="subtitle">java2</h3>
+    <div class="social">
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="iconfont icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">java2</h1>
+        <div class="stuff">
+            <span>五月 15, 2020</span>
+            
+
+        </div>
+        <div class="content markdown">
+            <blockquote>
+<p>— 学无止境 转向Java 拥抱开源 —<br>旅行的意义在于找到自己，而非浏览他人。<br>这短短的一生，我们最终都会失去。你不妨大胆一些，爱一个人，攀一座山，追一个梦。</p>
+</blockquote>
+<h2 id="编码规范"><a href="#编码规范" class="headerlink" title="编码规范"></a>编码规范</h2><p>类名要求：</p>
+<ul>
+<li>类名必须以英文字母开头，后接字母、数字和下划线的组合</li>
+<li>习惯以大写字母开头</li>
+</ul>
+<p>方法要求</p>
+<ul>
+<li>同类名要求</li>
+<li>习惯以小写字母开头</li>
+</ul>
+<p>注释是一种给人阅读的文本，不是程序的一部分，所以编译器会自动忽略注释。</p>
+ <a id="more"></a> 
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 单行注释</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">多行注释</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* 一般写在方法或类的定义处，可以用来自动创建文档的注释</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">* <span class="doctag">@auther</span> eiunui</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Hello</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"Hello, world!"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>Java定义类或方法的<code>{}</code>前<code>{</code>与类名或方法名不换行，C#的<code>{</code>需要进行换行</p>
+</blockquote>
+<blockquote>
+<p>Eclipse 快捷键<br>格式化代码 <code>Ctrl+Shift+F</code></p>
+</blockquote>
+<blockquote>
+<p>Intellij Idea 快捷键<br>格式化代码 <code>Ctrl+Shift+L</code> </p>
+</blockquote>
+<h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><ul>
+<li>变量必须先定义后使用；</li>
+<li>变量的特点是可以重新赋值；</li>
+<li>变量可以赋值给其他变量；</li>
+<li>定义一个变量，JVM在内存中为该变量分配一个“存储单元”；</li>
+<li>变量分为基本类型和引用类型。</li>
+</ul>
+<h3 id="基本数据类型"><a href="#基本数据类型" class="headerlink" title="基本数据类型"></a>基本数据类型</h3><ul>
+<li>整数类型：byte，short，int，long</li>
+<li>浮点数类型：float，double</li>
+<li>字符类型：char</li>
+<li>布尔类型：boolean</li>
+</ul>
+<h4 id="计算机内存的基本结构"><a href="#计算机内存的基本结构" class="headerlink" title="计算机内存的基本结构"></a>计算机内存的基本结构</h4><p>计算机内存的最小存储单元是字节（byte），一个字节就是一个8位二进制数，即8个bit。它的二进制表示范围从<code>00000000</code><del><code>11111111</code>，换算成十进制是0</del>255，换算成十六进制是<code>00</code>~<code>ff</code>。</p>
+<p>内存单元从0开始编号，称为内存地址。每个内存单元可以看作一间房间，内存地址就是门牌号。</p>
+<p><img src="data:image/png;base64,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" alt="img"></p>
+<p>不同数据类型占用字节数不一样：</p>
+<ul>
+<li><p>1字节：byte</p>
+</li>
+<li><p>2字节：short  char</p>
+</li>
+<li><p>4字节：int  float</p>
+</li>
+<li><p>8字节：long  double</p>
+</li>
+</ul>
+<h4 id="整形"><a href="#整形" class="headerlink" title="整形"></a>整形</h4><p>Java只定义了带符号的整形，所以，最高位的bit表示符号位(0表示正数，1表示负数)。所以各类型整形的值范围如下：</p>
+<ul>
+<li>byte：-128 ~ 127</li>
+<li>short: -32768 ~ 32767</li>
+<li>int: -2147483648 ~ 2147483647</li>
+<li>long: -9223372036854775808 ~ 9223372036854775807</li>
+</ul>
+<h4 id="浮点型"><a href="#浮点型" class="headerlink" title="浮点型"></a>浮点型</h4><p>浮点类型的数就是小数，小数用科学计数法表示的时候，小数点是可以“浮动”的，如1234.5可以表示成12.345x102，也可以表示成1.2345x103，所以称为浮点数。</p>
+<ul>
+<li>对于<code>float</code>类型，需要加上<code>f</code>后缀</li>
+</ul>
+<p><code>float</code>最大可表示 $3.4\times10^{38}$ </p>
+<p><code>double</code>最大可表示$1.79\times10^{308}$</p>
+<h4 id="布尔类型"><a href="#布尔类型" class="headerlink" title="布尔类型"></a>布尔类型</h4><p><code>boolean</code>只有<code>true</code>和<code>false</code>两个值。</p>
+<p>Java语言对布尔类型的存储并没有做规定，因为理论上存储布尔类型只需要1bit，但通常JVM内部会把boolean表示为4字节正数。</p>
+<h4 id="字符类型"><a href="#字符类型" class="headerlink" title="字符类型"></a>字符类型</h4><p>字符类型<code>char</code>表示一个字符。Java的<code>char</code>类型除了可表示标准的ASCII外，还可以表示一个Unicode字符。</p>
+<p>注意<code>char</code>类型使用单引号<code>&#39;</code>，且仅有一个字符，要和双引号<code>&quot;</code>的字符串类型区分开。</p>
+<h3 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h3><p>常量在定义时进行初始化后就不可再次赋值，再次赋值会导致编译错误。</p>
+<p>定义变量的时候，如果加上<code>final</code>修饰符，这个变量就变成了常量：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">final</span> <span class="keyword">double</span> PI = <span class="number">3.14</span>; <span class="comment">// PI是一个常量</span></span><br><span class="line"><span class="keyword">double</span> r = <span class="number">5.0</span>;</span><br><span class="line"><span class="keyword">double</span> area = PI * r * r;</span><br><span class="line">PI = <span class="number">300</span>; <span class="comment">// compile error!</span></span><br></pre></td></tr></table></figure>
+
+<p>常量的作用是用有意义的变量名来避免魔术数字（Magic number），例如，不要在代码中到处写<code>3.14</code>，而是定义一个常量。如果将来需要提高计算精度，我们只需要在常量的定义处修改，例如，改成<code>3.1416</code>，而不必在所有地方替换<code>3.14</code>。</p>
+<blockquote>
+<p>根据习惯，常量名通常全部大写；使用常量便于理解程序意图。</p>
+</blockquote>
+<h3 id="var关键字"><a href="#var关键字" class="headerlink" title="var关键字"></a>var关键字</h3><p>有时变量类型名太长太麻烦，可以省略变量类型，使用<code>var</code>关键字替代，编译器会根据赋值语句自动推断出变量的类型。</p>
+<h3 id="变量作用域"><a href="#变量作用域" class="headerlink" title="变量作用域"></a>变量作用域</h3><p><code>{}</code>中表示多行语句，在语句块中定义的变量，有一个作用域，就是从定义处<code>{</code>开始，到语句块结束<code>}</code>。超出了作用域引用这些变量，编译器会报错。</p>
+<h2 id="运算"><a href="#运算" class="headerlink" title="运算"></a>运算</h2><h3 id="整数运算"><a href="#整数运算" class="headerlink" title="整数运算"></a>整数运算</h3><p>整数的数值表示不但是精确的，而且整数运算永远是精确的，即使是除法也是精确的，因为两个整数相除只能得到结果的整数部分：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> x = <span class="number">12345</span> / <span class="number">67</span>; <span class="comment">// 184</span></span><br></pre></td></tr></table></figure>
+
+<p>求余运算使用<code>%</code>：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> y = <span class="number">12345</span> % <span class="number">67</span>; <span class="comment">// 12345÷67的余数是17</span></span><br></pre></td></tr></table></figure>
+
+<p>特别注意：整数的除法对于除数为0时运行时将报错，但编译不会报错。</p>
+<h4 id="溢出"><a href="#溢出" class="headerlink" title="溢出"></a>溢出</h4><p>要特别注意，整数由于存在范围限制，如果计算结果超出了范围，就会产生溢出，而溢出<strong><code>不会出错</code></strong>。</p>
+<h4 id="位移运算"><a href="#位移运算" class="headerlink" title="位移运算"></a>位移运算</h4><p>在计算机中，整数总是以二进制的形式表示。位移运算就是将整数的二进制数向左或向右移动指定位数，移动后产生的新位数值默认为0，最高位(符号位)不变化，即负数时，位移后最高位依旧为1。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> n = <span class="number">7</span>;       <span class="comment">// 00000000 00000000 00000000 00000111 = 7</span></span><br><span class="line"><span class="keyword">int</span> a = n &lt;&lt; <span class="number">1</span>;  <span class="comment">// 00000000 00000000 00000000 00001110 = 14</span></span><br><span class="line"><span class="keyword">int</span> b = n &lt;&lt; <span class="number">2</span>;  <span class="comment">// 00000000 00000000 00000000 00011100 = 28</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> n = <span class="number">7</span>;       <span class="comment">// 00000000 00000000 00000000 00000111 = 7</span></span><br><span class="line"><span class="keyword">int</span> a = n &gt;&gt; <span class="number">1</span>;  <span class="comment">// 00000000 00000000 00000000 00000011 = 3</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> n = -<span class="number">536870912</span>; <span class="comment">//对一个负数进行右移，最高位的1不动，结果仍然是一个负数</span></span><br><span class="line"><span class="keyword">int</span> a = n &gt;&gt; <span class="number">1</span>;  <span class="comment">// 11110000 00000000 00000000 00000000 = -268435456</span></span><br><span class="line"><span class="keyword">int</span> b = n &gt;&gt; <span class="number">2</span>;  <span class="comment">// 11111000 00000000 00000000 00000000 = -134217728</span></span><br></pre></td></tr></table></figure>
+
+<p>不带符号的右移运算，使用<code>&gt;&gt;&gt;</code>，它的特点是符号位跟着动，因此，对一个负数进行<code>&gt;&gt;&gt;</code>右移，它会变成正数，原因是最高位的<code>1</code>变成了<code>0</code></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> n = -<span class="number">536870912</span>;</span><br><span class="line"><span class="keyword">int</span> a = n &gt;&gt;&gt; <span class="number">1</span>;  <span class="comment">// 01110000 00000000 00000000 00000000 = 1879048192</span></span><br><span class="line"><span class="keyword">int</span> b = n &gt;&gt;&gt; <span class="number">2</span>;  <span class="comment">// 00111000 00000000 00000000 00000000 = 939524096</span></span><br><span class="line"><span class="keyword">int</span> c = n &gt;&gt;&gt; <span class="number">29</span>; <span class="comment">// 00000000 00000000 00000000 00000111 = 7</span></span><br></pre></td></tr></table></figure>
+
+<p>对<code>byte</code>和<code>short</code>类型进行移位时，会首先转换为<code>int</code>再进行位移。</p>
+<blockquote>
+<p>观察可发现，左移实际上就是不断地×2，右移实际上就是不断地÷2。</p>
+</blockquote>
+<h4 id="位运算"><a href="#位运算" class="headerlink" title="位运算"></a>位运算</h4><ul>
+<li>&amp; 与运算 <code>n = 0 &amp; 1; // 0</code>同时为1，才为1</li>
+<li>| 或运算 <code>n = 0 | 1; // 1</code> 任意为1，结果为1</li>
+<li>~ 非运算  <code>n = ~0; // 1</code> 0和1互换</li>
+<li>^ 异或运算 <code>n = 0 ^ 1; // 1</code> 两个数不同为1</li>
+</ul>
+<h4 id="运算优先级"><a href="#运算优先级" class="headerlink" title="运算优先级"></a>运算优先级</h4><ul>
+<li>在Java的计算表达式中，运算优先级从高到低依次是：<ul>
+<li><code>()</code></li>
+<li><code>!</code> <code>~</code> <code>++</code> <code>--</code></li>
+<li><code>*</code> <code>/</code> <code>%</code></li>
+<li><code>+</code> <code>-</code></li>
+<li><code>&lt;&lt;</code> <code>&gt;&gt;</code> <code>&gt;&gt;&gt;</code></li>
+<li><code>&amp;</code></li>
+<li><code>|</code></li>
+<li><code>+=</code> <code>-=</code> <code>*=</code> <code>/=</code></li>
+</ul>
+</li>
+</ul>
+<h4 id="类型自动提升与强制转型"><a href="#类型自动提升与强制转型" class="headerlink" title="类型自动提升与强制转型"></a>类型自动提升与强制转型</h4><p>在运算过程中，如果参与运算的两个数类型不一致，那么计算结果为较大类型的整型。例如，<code>short</code>和<code>int</code>计算，结果总是<code>int</code>，原因是<code>short</code>首先自动被转型为<code>int</code></p>
+<blockquote>
+<p>注意，超出范围的强制转型会得到错误的结果，原因是转型时，<code>int</code>的两个高位字节直接被扔掉，仅保留了低位的两个字节</p>
+</blockquote>
+<h3 id="浮点数运算"><a href="#浮点数运算" class="headerlink" title="浮点数运算"></a>浮点数运算</h3><blockquote>
+<p>浮点数运算和整数运算相比，只能进行加减乘除这些数值计算，不能做位运算和移位运算。</p>
+<p>在计算机中，浮点数虽然表示的范围大，但是，浮点数有个非常重要的特点，就是浮点数常常无法精确表示。</p>
+</blockquote>
+<p>由于浮点数存在运算误差，所以比较两个浮点数是否相等常常会出现错误的结果。正确的比较方法是判断两个浮点数之差的绝对值是否小于一个很小的数：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">double</span> r = Math.abs(x - y); <span class="comment">// 比较x和y是否相等，先计算其差的绝对值:</span></span><br><span class="line"><span class="keyword">if</span> (r &lt; <span class="number">0.00001</span>) &#123; <span class="comment">// 再判断绝对值是否足够小:</span></span><br><span class="line">    <span class="comment">// 可以认为相等</span></span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="comment">// 不相等</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="溢出-1"><a href="#溢出-1" class="headerlink" title="溢出"></a>溢出</h4><p>整数运算在除数为<code>0</code>时会报错，而浮点数运算在除数为<code>0</code>时，不会报错，但会返回几个特殊值：</p>
+<ul>
+<li><code>NaN</code>表示Not a Number</li>
+<li><code>Infinity</code>表示无穷大</li>
+<li><code>-Infinity</code>表示负无穷大</li>
+</ul>
+<h4 id="强制转换"><a href="#强制转换" class="headerlink" title="强制转换"></a>强制转换</h4><p>将浮点数强制转换为整数时，浮点数的小数部分会被丢掉，如果转型后超过了整形的最大范围，将返回整形的最大值。</p>
+<h3 id="布尔运算"><a href="#布尔运算" class="headerlink" title="布尔运算"></a>布尔运算</h3><p>对于布尔类型<code>boolean</code>，永远只有<code>true</code>和<code>false</code>两个值。</p>
+<p>关系运算符的优先级从高到低依次是：</p>
+<ul>
+<li><code>!</code></li>
+<li><code>&gt;</code>，<code>&gt;=</code>，<code>&lt;</code>，<code>&lt;=</code></li>
+<li><code>==</code>，<code>!=</code></li>
+<li><code>&amp;&amp;</code></li>
+<li><code>||</code></li>
+</ul>
+<h4 id="短路运算"><a href="#短路运算" class="headerlink" title="短路运算"></a>短路运算</h4><p>因为<code>false &amp;&amp; x</code>的结果总是<code>false</code>，无论<code>x</code>是<code>true</code>还是<code>false</code>，因此，与运算在确定第一个值为<code>false</code>后，不再继续计算，而是直接返回<code>false</code>；类似的，对于<code>||</code>运算，只要能确定第一个值为<code>true</code>，后续计算也不再进行，而是直接返回<code>true</code>。</p>
+<h4 id="三元运算符"><a href="#三元运算符" class="headerlink" title="三元运算符"></a>三元运算符</h4><p>三元运算符<code>b ? x : y</code>，它根据第一个布尔表达式的结果，分别返回后续两个表达式之一的计算结果。</p>
+<blockquote>
+<p>注意到三元运算<code>b ? x : y</code>会首先计算<code>b</code>，如果<code>b</code>为<code>true</code>，则只计算<code>x</code>，否则，只计算<code>y</code>。此外，<code>x</code>和<code>y</code>的类型必须相同，因为返回值不是<code>boolean</code>，而是<code>x</code>和<code>y</code>之一。</p>
+</blockquote>
+<h3 id="字符和字符串"><a href="#字符和字符串" class="headerlink" title="字符和字符串"></a>字符和字符串</h3><p>字符类型<code>char</code>是基本数据类型，它是<code>character</code>的缩写。一个<code>char</code>保存一个Unicode字符。</p>
+<blockquote>
+<p>Java在内存中总是使用Unicode表示字符，所以，一个英文字符和一个中文字符都用一个<code>char</code>类型表示，它们都占用两个字节。要显示一个字符的Unicode编码，只需将<code>char</code>类型直接赋值给<code>int</code>类型；</p>
+<p>也可以用转义字符<code>\u</code>+Unicode编码来表示一个字符</p>
+</blockquote>
+<h4 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h4><p>字符串类型<code>String</code>是引用类型，我们用双引号<code>&quot;...&quot;</code>表示字符串。一个字符串可以存储0个到任意个字符。</p>
+<blockquote>
+<p>注意，在java中String是大写的S，C#中string是小写的s</p>
+</blockquote>
+<blockquote>
+<p><code>&quot;...&quot;</code>中间出现<code>&quot;</code>时，可使用转义字符<code>\</code> </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String s = <span class="string">"abc\"xyz"</span>; <span class="comment">// 包含7个字符: a, b, c, ", x, y, z</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>常见的转义字符包括：</p>
+<ul>
+<li><code>\&quot;</code> 表示字符<code>&quot;</code></li>
+<li><code>\&#39;</code> 表示字符<code>&#39;</code></li>
+<li><code>\\</code> 表示字符<code>\</code></li>
+<li><code>\n</code> 表示换行符</li>
+<li><code>\r</code> 表示回车符</li>
+<li><code>\t</code> 表示Tab</li>
+<li><code>\u####</code> 表示一个Unicode编码的字符</li>
+</ul>
+<h4 id="多行字符串"><a href="#多行字符串" class="headerlink" title="多行字符串"></a>多行字符串</h4><ul>
+<li><p>使用<code>+</code>连接任意字符串和其他数据类型，如果用<code>+</code>连接字符串和其他数据类型，会将其他数据类型先自动转型为字符串，再连接；</p>
+</li>
+<li><p>从Java 13开始，字符串可以用<code>&quot;&quot;&quot;...&quot;&quot;&quot;</code>表示多行字符串（Text Blocks）。由于多行字符串是作为Java 13的预览特性（Preview Language Features）实现的，编译的时候，我们还需要给编译器加上参数：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">javac --source <span class="number">13</span> --enable-preview Main.java</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="不可变特性"><a href="#不可变特性" class="headerlink" title="不可变特性"></a>不可变特性</h4><p>Java的字符串除了是一个引用类型外，还有个重要特点，就是字符串不可变。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        String s = <span class="string">"hello"</span>;</span><br><span class="line">        System.out.println(s); <span class="comment">// 显示 hello</span></span><br><span class="line">        s = <span class="string">"world"</span>;</span><br><span class="line">        System.out.println(s); <span class="comment">// 显示 world</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>观察执行结果，难道字符串<code>s</code>变了吗？其实变的不是字符串，而是变量<code>s</code>的“指向”。</p>
+<p>执行<code>String s = &quot;hello&quot;;</code>时，JVM虚拟机先创建字符串<code>&quot;hello&quot;</code>，然后，把字符串变量<code>s</code>指向它：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">      s</span><br><span class="line">      │</span><br><span class="line">      ▼</span><br><span class="line">┌───┬───────────┬───┐</span><br><span class="line">│   │  &quot;hello&quot;  │   │</span><br><span class="line">└───┴───────────┴───┘</span><br></pre></td></tr></table></figure>
+
+<p>紧接着，执行<code>s = &quot;world&quot;;</code>时，JVM虚拟机先创建字符串<code>&quot;world&quot;</code>，然后，把字符串变量<code>s</code>指向它：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">      s ──────────────┐</span><br><span class="line">                      │</span><br><span class="line">                      ▼</span><br><span class="line">┌───┬───────────┬───┬───────────┬───┐</span><br><span class="line">│   │  &quot;hello&quot;  │   │  &quot;world&quot;  │   │</span><br><span class="line">└───┴───────────┴───┴───────────┴───┘</span><br></pre></td></tr></table></figure>
+
+<p>原来的字符串<code>&quot;hello&quot;</code>还在，只是我们无法通过变量<code>s</code>访问它而已。因此，字符串的不可变是指字符串内容不可变。</p>
+<h4 id="空值null"><a href="#空值null" class="headerlink" title="空值null"></a>空值null</h4><p>引用类型的变量可以指向一个空值<code>null</code>，它表示不存在，即该变量不指向任何对象。</p>
+<blockquote>
+<p>注意要区分空值<code>null</code>和空字符串<code>&quot;&quot;</code>，空字符串是一个有效的字符串对象，它不等于<code>null</code>。</p>
+</blockquote>
+<h3 id="数组类型"><a href="#数组类型" class="headerlink" title="数组类型"></a>数组类型</h3><p>定义一个数组类型的变量，使用数组类型“类型[]”，和单个基本类型变量不同，数组变量初始化必须使用<code>new 类型[n]</code>表示创建一个可容纳n个<code>类型</code>元素的数组。</p>
+<ul>
+<li>数组所有元素初始化为默认值，整型都是<code>0</code>，浮点型是<code>0.0</code>，布尔型是<code>false</code>；</li>
+<li>数组一旦创建后，大小就不可改变。</li>
+</ul>
+<p>要访问数组中的某一个元素，需要使用索引。数组索引从<code>0</code>开始。</p>
+<p>数组是引用类型，在使用索引访问数组元素时，如果索引超出范围，运行时将报错。</p>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        
+                            <li title='0' data-url='http://link.hhtjim.com/163/425570952.mp3'></li>
+                        
+                    
+                        
+                            <li title='1' data-url='http://link.hhtjim.com/163/425570952.mp3'></li>
+                        
+                    
+                        
+                            <li title='2' data-url='https://link.hhtjim.com/163/27483203.mp3'></li>
+                        
+                    
+                </ul>
+            
+        </div>
+        
+    <div id='gitalk-container' class="comment link"
+		data-enable='true'
+        data-ae='false'
+        data-ci=''
+        data-cs=''
+        data-r=''
+        data-o=''
+        data-a=''
+        data-d='false'
+    >查看评论</div>
+
+
+    </div>
+    
+        <div class='side'>
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#编码规范"><span class="toc-number">1.</span> <span class="toc-text">编码规范</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#变量"><span class="toc-number">2.</span> <span class="toc-text">变量</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#基本数据类型"><span class="toc-number">2.1.</span> <span class="toc-text">基本数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#计算机内存的基本结构"><span class="toc-number">2.1.1.</span> <span class="toc-text">计算机内存的基本结构</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#整形"><span class="toc-number">2.1.2.</span> <span class="toc-text">整形</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#浮点型"><span class="toc-number">2.1.3.</span> <span class="toc-text">浮点型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#布尔类型"><span class="toc-number">2.1.4.</span> <span class="toc-text">布尔类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#字符类型"><span class="toc-number">2.1.5.</span> <span class="toc-text">字符类型</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#常量"><span class="toc-number">2.2.</span> <span class="toc-text">常量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#var关键字"><span class="toc-number">2.3.</span> <span class="toc-text">var关键字</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#变量作用域"><span class="toc-number">2.4.</span> <span class="toc-text">变量作用域</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#运算"><span class="toc-number">3.</span> <span class="toc-text">运算</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#整数运算"><span class="toc-number">3.1.</span> <span class="toc-text">整数运算</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#溢出"><span class="toc-number">3.1.1.</span> <span class="toc-text">溢出</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#位移运算"><span class="toc-number">3.1.2.</span> <span class="toc-text">位移运算</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#位运算"><span class="toc-number">3.1.3.</span> <span class="toc-text">位运算</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#运算优先级"><span class="toc-number">3.1.4.</span> <span class="toc-text">运算优先级</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#类型自动提升与强制转型"><span class="toc-number">3.1.5.</span> <span class="toc-text">类型自动提升与强制转型</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#浮点数运算"><span class="toc-number">3.2.</span> <span class="toc-text">浮点数运算</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#溢出-1"><span class="toc-number">3.2.1.</span> <span class="toc-text">溢出</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#强制转换"><span class="toc-number">3.2.2.</span> <span class="toc-text">强制转换</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#布尔运算"><span class="toc-number">3.3.</span> <span class="toc-text">布尔运算</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#短路运算"><span class="toc-number">3.3.1.</span> <span class="toc-text">短路运算</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#三元运算符"><span class="toc-number">3.3.2.</span> <span class="toc-text">三元运算符</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#字符和字符串"><span class="toc-number">3.4.</span> <span class="toc-text">字符和字符串</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#字符串"><span class="toc-number">3.4.1.</span> <span class="toc-text">字符串</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#多行字符串"><span class="toc-number">3.4.2.</span> <span class="toc-text">多行字符串</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#不可变特性"><span class="toc-number">3.4.3.</span> <span class="toc-text">不可变特性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#空值null"><span class="toc-number">3.4.4.</span> <span class="toc-text">空值null</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数组类型"><span class="toc-number">3.5.</span> <span class="toc-text">数组类型</span></a></li></ol></li></ol>	
+        </div>
+    
+</div>
+
+
+    </div>
+</div>
+</body>
+
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/typed.js"></script>
+<script src="/js/diaspora.js"></script>
+
+
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+
+
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+</html>
