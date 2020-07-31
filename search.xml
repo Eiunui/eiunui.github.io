@@ -1,22 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hello World</title>
-    <url>/2020/05/07/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+    <title>docker安装</title>
+    <url>/2020/08/01/docker1-md/</url>
+    <content><![CDATA[<h2 id="Docker安装"><a href="#Docker安装" class="headerlink" title="Docker安装"></a>Docker安装</h2><h3 id="windows"><a href="#windows" class="headerlink" title="windows"></a>windows</h3><p>从官网下载安装包：<a href="https://docs.docker.com/docker-for-windows/install/" target="_blank" rel="noopener">https://docs.docker.com/docker-for-windows/install/</a></p>
+<p>区分win10和win10以下，win7使用旧版程序：<a href="http://mirrors.aliyun.com/docker-toolbox/windows/docker-toolbox/?spm=5176.8351553.0.0.4bc61991tQpsnV" target="_blank" rel="noopener">http://mirrors.aliyun.com/docker-toolbox/windows/docker-toolbox/?spm=5176.8351553.0.0.4bc61991tQpsnV</a></p>
+<h3 id="linux"><a href="#linux" class="headerlink" title="linux"></a>linux</h3><blockquote>
+<p>在 CentOS 7安装docker要求系统为64位、系统内核版本为 3.10 以上</p>
+<p>可使用<code>uname -r</code>命令查看系统内核信息</p>
+<p>使用<code>lsb_release -a</code>查看CentOS的版本</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#查看是否已安装dicker列表</span></span><br><span class="line">yum list installed | grep docker</span><br><span class="line"></span><br><span class="line"><span class="comment">#安装docker</span></span><br><span class="line">yum -y install docker</span><br><span class="line"></span><br><span class="line"><span class="comment">#启动docker</span></span><br><span class="line">systemctl start docker</span><br><span class="line"></span><br><span class="line"><span class="comment">#查看docker服务状态</span></span><br><span class="line">systemctl status docker</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<h4 id="离线安装"><a href="#离线安装" class="headerlink" title="离线安装"></a>离线安装</h4><p>在官方网站下载tar压缩包：</p>
+<p>可以先下载到本地，然后通过ftp工具上传到服务器上，或者在服务器上使用命令下载：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wget https://download.docker.com/linux/static/stable/x86_64/docker-18.06.3-ce.tgz</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#解压</span></span><br><span class="line">tar -zxvf docker-18.06.3-ce.tgz</span><br><span class="line"><span class="comment">#将解压出来的docker文件复制到 /usr/bin/ 目录下</span></span><br><span class="line">cp docker/* /usr/bin/</span><br><span class="line"></span><br><span class="line"><span class="comment">#在/etc/systemd/system/目录下新增docker.service文件，内容如下，这样可以将docker注册为service服务</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#给docker.service文件添加执行权限</span></span><br><span class="line">chmod +x /etc/systemd/system/docker.service </span><br><span class="line"></span><br><span class="line"><span class="comment">#重新加载配置文件</span></span><br><span class="line">systemctl daemon-reload   </span><br><span class="line"><span class="comment">#启动docker</span></span><br><span class="line">systemctl start docker</span><br><span class="line"><span class="comment">#设置开机启动</span></span><br><span class="line">systemctl <span class="built_in">enable</span> docker.service</span><br><span class="line"></span><br><span class="line"><span class="comment">#查看docker服务状态</span></span><br><span class="line">systemctl status docker</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>docker.service文件内容：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[Unit]</span><br><span class="line">Description=Docker Application Container Engine</span><br><span class="line">Documentation=https://docs.docker.com</span><br><span class="line">After=network-online.target firewalld.service</span><br><span class="line">Wants=network-online.target</span><br><span class="line"></span><br><span class="line">[Service]</span><br><span class="line">Type=notify</span><br><span class="line"></span><br><span class="line"><span class="comment"># the default is not to use systemd for cgroups because the delegate issues still</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># exists and systemd currently does not support the cgroup feature set required</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># for containers run by docker</span></span><br><span class="line"></span><br><span class="line">ExecStart=/usr/bin/dockerd --selinux-enabled=<span class="literal">false</span> --insecure-registry=127.0.0.1</span><br><span class="line">ExecReload=/bin/<span class="built_in">kill</span> -s HUP <span class="variable">$MAINPID</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Having non-zero Limit*s causes performance problems due to accounting overhead</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># in the kernel. We recommend using cgroups to do container-local accounting.</span></span><br><span class="line"></span><br><span class="line">LimitNOFILE=infinity</span><br><span class="line">LimitNPROC=infinity</span><br><span class="line">LimitCORE=infinity</span><br><span class="line"></span><br><span class="line"><span class="comment"># Uncomment TasksMax if your systemd version supports it.</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Only systemd 226 and above support this version.</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#TasksMax=infinity</span></span><br><span class="line">TimeoutStartSec=0</span><br><span class="line"></span><br><span class="line"><span class="comment"># set delegate yes so that systemd does not reset the cgroups of docker containers</span></span><br><span class="line"></span><br><span class="line">Delegate=yes</span><br><span class="line"></span><br><span class="line"><span class="comment"># kill only the docker process, not all processes in the cgroup</span></span><br><span class="line"></span><br><span class="line">KillMode=process</span><br><span class="line"></span><br><span class="line"><span class="comment"># restart the docker process if it exits prematurely</span></span><br><span class="line"></span><br><span class="line">Restart=on-failure</span><br><span class="line">StartLimitBurst=3</span><br><span class="line">StartLimitInterval=60s</span><br><span class="line"></span><br><span class="line">[Install]</span><br><span class="line">WantedBy=multi-user.target</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+<blockquote>
+<p>–insecure-registry=127.0.0.1 此处可修改为自己的私服ip，是针对有搭建了自己私服Harbor时允许docker进行不安全的访问，否则访问将会被拒绝。</p>
+</blockquote>
 ]]></content>
+      <tags>
+        <tag>docker</tag>
+      </tags>
   </entry>
   <entry>
     <title>java特性</title>
@@ -297,5 +308,23 @@
       <tags>
         <tag>java se</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2020/05/07/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+]]></content>
   </entry>
 </search>
