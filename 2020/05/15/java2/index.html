@@ -1,75 +1,103 @@
+<!DOCTYPE html><html lang="zh_CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>编码规范 | Eiunui的小空间</title><meta name="description" content="— 学无止境 转向Java 拥抱开源 —旅行的意义在于找到自己，而非浏览他人。这短短的一生，我们最终都会失去。你不妨大胆一些，爱一个人，攀一座山，追一个梦。  编码规范类名要求：  类名必须以英文字母开头，后接字母、数字和下划线的组合 习惯以大写字母开头  方法要求  同类名要求 习惯以小写字母开头  注释是一种给人阅读的文本，不是程序的一部分，所以编译器会自动忽略注释。     1&#x2F;&#x2F; 单行注"><meta name="keywords" content="java se"><meta name="author" content="Eiunui"><meta name="copyright" content="Eiunui"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://eiunui.github.io/2020/05/15/java2/"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin="crossorigin"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta property="og:type" content="article"><meta property="og:title" content="编码规范"><meta property="og:url" content="https://eiunui.github.io/2020/05/15/java2/"><meta property="og:site_name" content="Eiunui的小空间"><meta property="og:description" content="— 学无止境 转向Java 拥抱开源 —旅行的意义在于找到自己，而非浏览他人。这短短的一生，我们最终都会失去。你不妨大胆一些，爱一个人，攀一座山，追一个梦。  编码规范类名要求：  类名必须以英文字母开头，后接字母、数字和下划线的组合 习惯以大写字母开头  方法要求  同类名要求 习惯以小写字母开头  注释是一种给人阅读的文本，不是程序的一部分，所以编译器会自动忽略注释。     1&#x2F;&#x2F; 单行注"><meta property="og:image" content="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1596553805655&amp;di=f4dd8b7bb8c4198896e7fc0f9e01f840&amp;imgtype=0&amp;src=http%3A%2F%2Fhomesitetask.zbjimg.com%2Fhomesite%2Ftask%2Fjava%25E5%25BC%2580%25E5%258F%25911.jpg%2Forigine%2F85fe4cc4-31d5-452f-b4bd-74953b72b744"><meta property="article:published_time" content="2020-05-15T15:58:24.000Z"><meta property="article:modified_time" content="2020-08-04T12:22:23.128Z"><meta name="twitter:card" content="summary"><script>var activateDarkMode = function () {
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#000')
+  }
+}
+var activateLightMode = function () {
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#fff')
+  }
+}
 
-<!DOCTYPE html>
-<html lang="en" class="loading">
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>编码规范 - Eiunui的小空间</title>
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="google" content="notranslate" />
-    <meta name="keywords" content="Eiunui,"> 
-    <meta name="description" content="
-— 学无止境 转向Java 拥抱开源 —旅行的意义在于找到自己，而非浏览他人。这短短的一生，我们最终都会失去。你不妨大胆一些，爱一个人，攀一座山，追一个梦。
+var getCookies = function (name) {
+  const value = `; ${document.cookie}`
+  const parts = value.split(`; ${name}=`)
+  if (parts.length === 2) return parts.pop().split(';').shift()
+}
 
-编码规范类名要求：
+var autoChangeMode = 'false'
+var t = getCookies('theme')
+if (autoChangeMode === '1') {
+  var isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+  var isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+  var isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+  var hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
 
-类名必须以英文,"> 
-    <meta name="author" content="Eiunui"> 
-    <link rel="alternative" href="atom.xml" title="Eiunui的小空间" type="application/atom+xml"> 
-    <link rel="icon" href="/img/favicon2.png"> 
-    
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-
-    
-<link rel="stylesheet" href="/css/diaspora.css">
-
-	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <script>
-         (adsbygoogle = window.adsbygoogle || []).push({
-              google_ad_client: "ca-pub-8691406134231910",
-              enable_page_level_ads: true
-         });
-    </script>
-    <script async custom-element="amp-auto-ads"
-        src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
-    </script>
-<meta name="generator" content="Hexo 4.2.0"></head>
-
-<body class="loading">
-    <span id="config-title" style="display:none">Eiunui的小空间</span>
-    <div id="loader"></div>
-    <div id="single">
-    <div id="top" style="display: block;">
-    <div class="bar" style="width: 0;"></div>
-    <a class="iconfont icon-home image-icon" href="javascript:;" data-url="http://yoursite.com"></a>
-    <div title="播放/暂停" class="iconfont icon-play"></div>
-    <h3 class="subtitle">编码规范</h3>
-    <div class="social">
-        <div>
-            <div class="share">
-                <a title="获取二维码" class="iconfont icon-scan" href="javascript:;"></a>
-            </div>
-            <div id="qr"></div>
-        </div>
-    </div>
-    <div class="scrollbar"></div>
-</div>
-
-    <div class="section">
-        <div class="article">
-    <div class='main'>
-        <h1 class="title">编码规范</h1>
-        <div class="stuff">
-            <span>五月 15, 2020</span>
-            
-  <ul class="post-tags-list" itemprop="keywords"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/java-se/" rel="tag">java se</a></li></ul>
-
-
-        </div>
-        <div class="content markdown">
-            <blockquote>
+  if (t === undefined) {
+    if (isLightMode) activateLightMode()
+    else if (isDarkMode) activateDarkMode()
+    else if (isNotSpecified || hasNoSupport) {
+      console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
+      var now = new Date()
+      var hour = now.getHours()
+      var isNight = hour <= 6 || hour >= 18
+      isNight ? activateDarkMode() : activateLightMode()
+    }
+    window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+      if (Cookies.get('theme') === undefined) {
+        e.matches ? activateDarkMode() : activateLightMode()
+      }
+    })
+  } else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else if (autoChangeMode === '2') {
+  now = new Date()
+  hour = now.getHours()
+  isNight = hour <= 6 || hour >= 18
+  if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else {
+  if (t === 'dark') activateDarkMode()
+  else if (t === 'light') activateLightMode()
+}</script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  bookmark: {
+    message_prev: 'Press',
+    message_next: 'to bookmark this page'
+  },
+  runtime_unit: 'days',
+  runtime: false,
+  copyright: undefined,
+  ClickShowText: undefined,
+  medium_zoom: false,
+  fancybox: true,
+  Snackbar: undefined,
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  baiduPush: false,
+  highlightCopy: true,
+  highlightLang: true,
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isanchor: false    
+}</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: undefined,
+  isSidebar: true,
+  postUpdate: '2020-08-04 20:22:23'
+}</script><noscript><style>
+#nav {
+  opacity: 1
+}
+.justified-gallery img {
+  opacity: 1
+}
+</style></noscript><meta name="generator" content="Hexo 4.2.0"></head><body><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" data-lazy-src="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">Articles</div><div class="length_num">5</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">Tags</div><div class="length_num">3</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">Categories</div><div class="length_num">1</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div id="body-wrap"><div id="sidebar"><i class="fas fa-arrow-right on" id="toggle-sidebar"></i><div class="sidebar-toc"><div class="sidebar-toc__title">Catalog</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#编码规范"><span class="toc-number">1.</span> <span class="toc-text">编码规范</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#变量"><span class="toc-number">2.</span> <span class="toc-text">变量</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#基本数据类型"><span class="toc-number">2.1.</span> <span class="toc-text">基本数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#计算机内存的基本结构"><span class="toc-number">2.1.1.</span> <span class="toc-text">计算机内存的基本结构</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#整形"><span class="toc-number">2.1.2.</span> <span class="toc-text">整形</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#浮点型"><span class="toc-number">2.1.3.</span> <span class="toc-text">浮点型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#布尔类型"><span class="toc-number">2.1.4.</span> <span class="toc-text">布尔类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#字符类型"><span class="toc-number">2.1.5.</span> <span class="toc-text">字符类型</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#常量"><span class="toc-number">2.2.</span> <span class="toc-text">常量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#var关键字"><span class="toc-number">2.3.</span> <span class="toc-text">var关键字</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#变量作用域"><span class="toc-number">2.4.</span> <span class="toc-text">变量作用域</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#运算"><span class="toc-number">3.</span> <span class="toc-text">运算</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#整数运算"><span class="toc-number">3.1.</span> <span class="toc-text">整数运算</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#溢出"><span class="toc-number">3.1.1.</span> <span class="toc-text">溢出</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#位移运算"><span class="toc-number">3.1.2.</span> <span class="toc-text">位移运算</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#位运算"><span class="toc-number">3.1.3.</span> <span class="toc-text">位运算</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#运算优先级"><span class="toc-number">3.1.4.</span> <span class="toc-text">运算优先级</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#类型自动提升与强制转型"><span class="toc-number">3.1.5.</span> <span class="toc-text">类型自动提升与强制转型</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#浮点数运算"><span class="toc-number">3.2.</span> <span class="toc-text">浮点数运算</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#溢出-1"><span class="toc-number">3.2.1.</span> <span class="toc-text">溢出</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#强制转换"><span class="toc-number">3.2.2.</span> <span class="toc-text">强制转换</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#布尔运算"><span class="toc-number">3.3.</span> <span class="toc-text">布尔运算</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#短路运算"><span class="toc-number">3.3.1.</span> <span class="toc-text">短路运算</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#三元运算符"><span class="toc-number">3.3.2.</span> <span class="toc-text">三元运算符</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#字符和字符串"><span class="toc-number">3.4.</span> <span class="toc-text">字符和字符串</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#字符串"><span class="toc-number">3.4.1.</span> <span class="toc-text">字符串</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#多行字符串"><span class="toc-number">3.4.2.</span> <span class="toc-text">多行字符串</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#不可变特性"><span class="toc-number">3.4.3.</span> <span class="toc-text">不可变特性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#空值null"><span class="toc-number">3.4.4.</span> <span class="toc-text">空值null</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数组类型"><span class="toc-number">3.5.</span> <span class="toc-text">数组类型</span></a></li></ol></li></ol></div></div></div><header class="post-bg" id="page-header" style="background-image: url(http://h1.ioliu.cn/bing/BullPoint_ZH-CN0520993795_1920x1080.jpg?imageslim)"><nav id="nav"><span class="pull-left" id="blog_name"><a class="blog_title" id="site-name" href="/">Eiunui的小空间</a></span><span class="pull-right menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><span class="toggle-menu close"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="post-info"><div id="post-title"><div class="posttitle">编码规范</div></div><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2020-05-15T15:58:24.000Z" title="Created 2020-05-15 23:58:24">2020-05-15</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2020-08-04T12:22:23.128Z" title="Updated 2020-08-04 20:22:23">2020-08-04</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a></span></div><div class="meta-secondline"> <span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout_post" id="content-inner"><article id="post"><div class="post-content" id="article-container"><blockquote>
 <p>— 学无止境 转向Java 拥抱开源 —<br>旅行的意义在于找到自己，而非浏览他人。<br>这短短的一生，我们最终都会失去。你不妨大胆一些，爱一个人，攀一座山，追一个梦。</p>
 </blockquote>
 <h2 id="编码规范"><a href="#编码规范" class="headerlink" title="编码规范"></a>编码规范</h2><p>类名要求：</p>
@@ -115,7 +143,7 @@
 </ul>
 <h4 id="计算机内存的基本结构"><a href="#计算机内存的基本结构" class="headerlink" title="计算机内存的基本结构"></a>计算机内存的基本结构</h4><p>计算机内存的最小存储单元是字节（byte），一个字节就是一个8位二进制数，即8个bit。它的二进制表示范围从<code>00000000</code><del><code>11111111</code>，换算成十进制是0</del>255，换算成十六进制是<code>00</code>~<code>ff</code>。</p>
 <p>内存单元从0开始编号，称为内存地址。每个内存单元可以看作一间房间，内存地址就是门牌号。</p>
-<p><img src="data:image/png;base64,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" alt="img"></p>
+<p><img src= "/img/loading.gif" data-lazy-src="data:image/png;base64,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" alt="img"></p>
 <p>不同数据类型占用字节数不一样：</p>
 <ul>
 <li><p>1字节：byte</p>
@@ -280,123 +308,4 @@
 </ul>
 <p>要访问数组中的某一个元素，需要使用索引。数组索引从<code>0</code>开始。</p>
 <p>数组是引用类型，在使用索引访问数组元素时，如果索引超出范围，运行时将报错。</p>
-
-            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
-            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
-                <source type="audio/mpeg" src="">
-            </audio>
-            
-                <ul id="audio-list" style="display:none">
-                    
-                        
-                            <li title='0' data-url='http://link.hhtjim.com/163/425570952.mp3'></li>
-                        
-                    
-                        
-                            <li title='1' data-url='http://link.hhtjim.com/163/425570952.mp3'></li>
-                        
-                    
-                        
-                            <li title='2' data-url='https://link.hhtjim.com/163/27483203.mp3'></li>
-                        
-                    
-                </ul>
-            
-        </div>
-        
-    <div id='gitalk-container' class="comment link"
-		data-enable='true'
-        data-ae='false'
-        data-ci=''
-        data-cs=''
-        data-r=''
-        data-o=''
-        data-a=''
-        data-d='false'
-    >查看评论</div>
-
-
-    </div>
-    
-        <div class='side'>
-			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#编码规范"><span class="toc-number">1.</span> <span class="toc-text">编码规范</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#变量"><span class="toc-number">2.</span> <span class="toc-text">变量</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#基本数据类型"><span class="toc-number">2.1.</span> <span class="toc-text">基本数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#计算机内存的基本结构"><span class="toc-number">2.1.1.</span> <span class="toc-text">计算机内存的基本结构</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#整形"><span class="toc-number">2.1.2.</span> <span class="toc-text">整形</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#浮点型"><span class="toc-number">2.1.3.</span> <span class="toc-text">浮点型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#布尔类型"><span class="toc-number">2.1.4.</span> <span class="toc-text">布尔类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#字符类型"><span class="toc-number">2.1.5.</span> <span class="toc-text">字符类型</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#常量"><span class="toc-number">2.2.</span> <span class="toc-text">常量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#var关键字"><span class="toc-number">2.3.</span> <span class="toc-text">var关键字</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#变量作用域"><span class="toc-number">2.4.</span> <span class="toc-text">变量作用域</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#运算"><span class="toc-number">3.</span> <span class="toc-text">运算</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#整数运算"><span class="toc-number">3.1.</span> <span class="toc-text">整数运算</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#溢出"><span class="toc-number">3.1.1.</span> <span class="toc-text">溢出</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#位移运算"><span class="toc-number">3.1.2.</span> <span class="toc-text">位移运算</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#位运算"><span class="toc-number">3.1.3.</span> <span class="toc-text">位运算</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#运算优先级"><span class="toc-number">3.1.4.</span> <span class="toc-text">运算优先级</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#类型自动提升与强制转型"><span class="toc-number">3.1.5.</span> <span class="toc-text">类型自动提升与强制转型</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#浮点数运算"><span class="toc-number">3.2.</span> <span class="toc-text">浮点数运算</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#溢出-1"><span class="toc-number">3.2.1.</span> <span class="toc-text">溢出</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#强制转换"><span class="toc-number">3.2.2.</span> <span class="toc-text">强制转换</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#布尔运算"><span class="toc-number">3.3.</span> <span class="toc-text">布尔运算</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#短路运算"><span class="toc-number">3.3.1.</span> <span class="toc-text">短路运算</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#三元运算符"><span class="toc-number">3.3.2.</span> <span class="toc-text">三元运算符</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#字符和字符串"><span class="toc-number">3.4.</span> <span class="toc-text">字符和字符串</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#字符串"><span class="toc-number">3.4.1.</span> <span class="toc-text">字符串</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#多行字符串"><span class="toc-number">3.4.2.</span> <span class="toc-text">多行字符串</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#不可变特性"><span class="toc-number">3.4.3.</span> <span class="toc-text">不可变特性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#空值null"><span class="toc-number">3.4.4.</span> <span class="toc-text">空值null</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数组类型"><span class="toc-number">3.5.</span> <span class="toc-text">数组类型</span></a></li></ol></li></ol>	
-        </div>
-    
-</div>
-
-
-    </div>
-</div>
-</body>
-
-<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-
-
-<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
-<script src="/js/plugin.js"></script>
-<script src="/js/typed.js"></script>
-<script src="/js/diaspora.js"></script>
-
-
-<link rel="stylesheet" href="/photoswipe/photoswipe.css">
-<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
-
-
-<script src="/photoswipe/photoswipe.min.js"></script>
-<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
-
-
-<!-- Root element of PhotoSwipe. Must have class pswp. -->
-<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-    <!-- Background of PhotoSwipe. 
-         It's a separate element as animating opacity is faster than rgba(). -->
-    <div class="pswp__bg"></div>
-    <!-- Slides wrapper with overflow:hidden. -->
-    <div class="pswp__scroll-wrap">
-        <!-- Container that holds slides. 
-            PhotoSwipe keeps only 3 of them in the DOM to save memory.
-            Don't modify these 3 pswp__item elements, data is added later on. -->
-        <div class="pswp__container">
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-        </div>
-        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
-        <div class="pswp__ui pswp__ui--hidden">
-            <div class="pswp__top-bar">
-                <!--  Controls are self-explanatory. Order can be changed. -->
-                <div class="pswp__counter"></div>
-                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-                <button class="pswp__button pswp__button--share" title="Share"></button>
-                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
-                <!-- element will get class pswp__preloader--active when preloader is running -->
-                <div class="pswp__preloader">
-                    <div class="pswp__preloader__icn">
-                      <div class="pswp__preloader__cut">
-                        <div class="pswp__preloader__donut"></div>
-                      </div>
-                    </div>
-                </div>
-            </div>
-            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                <div class="pswp__share-tooltip"></div> 
-            </div>
-            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-            </button>
-            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-            </button>
-            <div class="pswp__caption">
-                <div class="pswp__caption__center"></div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-
-
-
-
-</html>
+</div><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:undefined">Eiunui</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="https://eiunui.github.io/2020/05/15/java2/">https://eiunui.github.io/2020/05/15/java2/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/java-se/">java se</a></div><div class="post_share"><div class="social-share" data-image="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1596553805655&amp;di=f4dd8b7bb8c4198896e7fc0f9e01f840&amp;imgtype=0&amp;src=http%3A%2F%2Fhomesitetask.zbjimg.com%2Fhomesite%2Ftask%2Fjava%25E5%25BC%2580%25E5%258F%25911.jpg%2Forigine%2F85fe4cc4-31d5-452f-b4bd-74953b72b744" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2020/08/01/maven01/"><img class="prev-cover" data-lazy-src="https://www.oracle.com//a/ocom/img/rc32-java-continuous-innovation.png" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">Previous Post</div><div class="prev_info">maven 配置</div></div></a></div><div class="next-post pull-right"><a href="/2020/05/08/java1/"><img class="next-cover" data-lazy-src="https://www.oracle.com/a/ocom/img/rc32-java-1programming-language.png" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">java特性</div></div></a></div></nav><div class="relatedPosts"><div class="relatedPosts_headline"><i class="fas fa-thumbs-up fa-fw"></i><span> Related Articles</span></div><div class="relatedPosts_list"><div class="relatedPosts_item"><a href="/2020/05/08/java1/" title="java特性"><img class="relatedPosts_cover" data-lazy-src="https://www.oracle.com/a/ocom/img/rc32-java-1programming-language.png"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="far fa-calendar-alt fa-fw"></i> 2020-05-08</div><div class="relatedPosts_title">java特性</div></div></a></div></div></div></article></main><footer id="footer" data-type="color"><div id="footer-wrap"><div class="copyright">&copy;2020 By Eiunui</div><div class="framework-info"><span>Framework </span><a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a href="https://github.com/jerryc127/hexo-theme-butterfly" target="_blank" rel="noopener">Butterfly</a></div></div></footer></div><section id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="font_plus" type="button" title="Increase Font Size"><i class="fas fa-plus"></i></button><button id="font_minus" type="button" title="Decrease Font Size"><i class="fas fa-minus"></i></button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></section><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module" defer></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js" async></script><div class="js-pjax"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></div></body></html>
